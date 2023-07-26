@@ -1,0 +1,30 @@
+﻿@*@model IEnumerable<WebApplication15.Models.Model.Hizmet>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmetler</h2>
+<a class="btn-default" href="/Hizmet/Create/">Yeni Ekle</a>
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Açıklama</th>
+            <th>ResimURL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+        <tr>
+            <td>@item.HizmetID</td>
+            <td>@item.Baslik</td>
+            <td>@item.Aciklama</td>
+            <td><img src="@item.ResimURL" /></td>
+        </tr>
+        }
+    </tbody>
+</table>*@
